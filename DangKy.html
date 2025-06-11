@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style1.css" />
+  <link rel="shortcut icon" href="image/favicon-32x32.png" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/c9f5871d83.js" crossorigin="anonymous"></script>
+  <title>Đăng ký</title>
+
+</head>
+
+<div class="background">
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html">Trang chủ </a>
+      <a href="index #wp-products">Sản phẩm </a>
+      <a href="index.html#cart">Giỏ hàng </a>
+      <a href="index.html#footer">Liên hệ </a>
+    </nav>
+  </header>
+  <div class="home">
+    <div class="content">
+      <a href="#" class="logo">CE Breakfast Food </a>
+      <h2 style="font-size: 80px">Chào mừng</h2>
+      <h3>đến với đồ ăn sáng CE</h3>
+      <pre>
+Chuyên cung cấp các món ăn đảm bảo dinh dưỡng hợp vệ sinh đến người
+          dùng,phục vụ người dùng 1 cái hoàn hảo nhất</pre>
+      <div class="icon">
+        <i class="fa-band fa-instagram"></i>
+        <i class="fa-band fa-instagram"></i>
+        <i class="fa-band fa-instagram"></i>
+        <i class="fa-band fa-instagram"></i>
+      </div>
+    </div>
+
+    <!-- FORM ĐĂNG KÝ -->
+    <div class="login">
+      <h2>Đăng ký</h2>
+      <form id="register-form">
+        <div class="input">
+          <input type="text" class="input1" placeholder="Họ và tên" id="fullname" required>
+        </div>
+        <div class="input">
+          <input type="email" class="input1" id="email" placeholder="Email" required />
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <div class="input">
+          <input type="password" class="input1" id="password" placeholder="Mật khẩu" required />
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <div class="input">
+          <input type="password" class="input1" id="regConfirm" placeholder="Xác nhận mật khẩu" required />
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <div class="button">
+          <button class="btn" type="submit">Đăng ký</button>
+        </div>
+      </form>
+
+      <div class="sign-up">
+          <p>Bạn đã có tài khoản?</p>
+          <a href="DangNhap.html">Đăng Nhập </a>
+        </div>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+<script>
+    document.getElementById('register-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const fullname = document.getElementById('fullname').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('regConfirm').value;
+
+      // Kiểm tra xác nhận mật khẩu
+      if (password !== confirmPassword) {
+        alert('Mật khẩu và xác nhận mật khẩu không khớp!');
+        return;
+      }
+
+      // Lưu thông tin người dùng vào localStorage
+      let users = JSON.parse(localStorage.getItem('users')) || [];
+      if (users.find(user => user.email === email)) {
+        alert('Email đã được sử dụng!');
+        return;
+      }
+      users.push({ fullname, email, password });
+      localStorage.setItem('users', JSON.stringify(users));
+
+      alert('Đăng ký thành công! Vui lòng đăng nhập.');
+      window.location.href = 'DangNhap.html';
+    });
+  </script>
+</body>
+
+</html>

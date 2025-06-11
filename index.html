@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BÁN ĐỒ ĂN SÁNG</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="shortcut icon" href="image/favicon-32x32.png" type="image/x-icon">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <a href="" class="logo">
+                <img src="image/logoce.png" alt="">
+            </a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <header class="d-flex justify-content-center py-3">
+                <ul class="nav nav-pills" id="menu">
+                    <li class="nav-item"><a href="#" class="nav-link" style="font-size:20px;color: black;">Trang
+                            chủ</a></li>
+                    <li class="nav-item"><a href="#wp-products" class="nav-link"
+                            style="font-size:20px;color: black;">Sản phẩm</a></li>
+                    <li class="nav-item"><a href="#cart" class="nav-link" style="font-size:20px;color: black;">Giỏ
+                            hàng</a></li>
+                    <li class="nav-item"><a href="#footer" class="nav-link" style="font-size:20px;color: black;">Liên
+                            hệ</a></li>
+                </ul>
+            </header>
+            <div id="search-container" style="text-align: center; margin-top: 30px;">
+                <input type="text" id="search-input" placeholder="Tìm kiếm sản phẩm..."
+                    style="padding: 10px; width: 300px; font-size: 16px;">
+                    
+            </div>
+            <div id="actions">
+                <div class="item">
+                    <a href="Dangnhap.html" id="login-link">
+                        <img src="image/user.png" alt="Dangnhap">
+                        <span id="login-text">Đăng nhập</span>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#cart">
+                        <img src="image/cart.png" alt="">
+                        <span>Giỏ hàng (<span id="cart-count">0</span>)</span>
+                    </a>
+                </div>
+                <div class="item" id="logout-link" style="display: none;">
+                    <a href="index.html" onclick="logout()">
+                        <span>Đăng xuất</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <marquee behavior="scroll" direction="left" scrollamount="17">Kính chào quý khách - Chúc bạn một ngày tốt
+                lành!❤</marquee>
+        </div>
+
+        <div id="banner">
+            <div class="box-left">
+                <h2>
+                    <span>THỨC ĂN</span>
+                    <br>
+                    <span>THƯỢNG HẠNG</span>
+                </h2>
+                <p>Chuyên cung cấp các món ăn đảm bảo dinh dưỡng hợp vệ sinh đến người dùng, phục vụ người dùng một cách
+                    hoàn hảo nhất</p>
+                <a href="#wp-products" style="text-decoration: none;"><button>Mua ngay</button></a>
+            </div>
+            <div class="box-right">
+                <img src="image/img_1.png" alt="">
+                <img src="image/img_2.png" alt="">
+                <img src="image/img_3.png" alt="">
+            </div>
+            <div class="to-bottom">
+                <a href="#wp-products">
+                    <img src="image/to_bottom.png" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div id="saleoff">
+            <div class="box-left">
+                <h1>
+                    <span>GIẢM GIÁ LÊN ĐẾN</span>
+                    <span>20%</span>
+                    <div>
+                        <marquee behavior="scroll" direction="left" scrollamount="17">Chương trình áp dụng từ ngày
+                            10/6 đến hết ngày 14/6!</marquee>
+                    </div>
+                </h1>
+            </div>
+            <div class="box-right"></div>
+        </div>
+
+        <div id="wp-products">
+            <h2>SẢN PHẨM CỦA CHÚNG TÔI</h2>
+
+            <!-- Tab 1 -->
+            <ul id="tab-1" class="tab-content active">
+                <div class="item" id="product-1">
+                    <img style="width: 256px; height: 152px;" src="image/banhmi.png" alt="">
+                    <div class="stars">
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                    </div>
+                    <div class="name">Bánh Mì Thịt</div>
+                    <div class="desc">Bánh mì Việt Nam giòn rụm, nhân đa dạng, đậm đà hương vị.</div>
+                    <div class="price">15.000 VNĐ</div>
+                    <div class="buy">
+                        <button onclick="window.location.href='Thanhtoan15.html';">Mua hàng</button>
+                        <button class="add-to-cart" onclick="addToCart('product-1', 'Bánh Mì Thịt', 15000)">Thêm vào
+                            giỏ</button>
+                    </div>
+                </div>
+                <div class="item" id="product-2">
+                    <img style="width: 256px; height: 152px;" src="image/pho.png" alt="">
+                    <div class="stars">
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                    </div>
+                    <div class="name">Phở Nam Định</div>
+                    <div class="desc">Phở Nam Định có nước đậm đà từ xương hầm lâu, bánh phở mềm dai.</div>
+                    <div class="price">25.000 VNĐ</div>
+                    <div class="buy">
+                        <button onclick="window.location.href='Thanhtoan25.html';">Mua hàng</button>
+                        <button class="add-to-cart" onclick="addToCart('product-2', 'Phở Nam Định', 25000)">Thêm vào
+                            giỏ</button>
+                    </div>
+                </div>
+                <div class="item" id="product-3">
+                    <img style="width: 256px; height: 152px;" src="image/bunbohue.png" alt="">
+                    <div class="stars">
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                    </div>
+                    <div class="name">Bún Bò Huế</div>
+                    <div class="desc">Bún bò Huế đậm đà, cay nhẹ, thơm mùi sả.</div>
+                    <div class="price">25.000 VNĐ</div>
+                    <div class="buy">
+                        <button onclick="window.location.href='Thanhtoan25.html';">Mua hàng</button>
+                        <button class="add-to-cart" onclick="addToCart('product-3', 'Bún Bò Huế', 25000)">Thêm vào
+                            giỏ</button>
+                    </div>
+                </div>
+                <div class="item" id="product-4">
+                    <img style="width: 256px; height: 155px;" src="image/miquang.png" alt="">
+                    <div class="stars">
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                    </div>
+                    <div class="name">Mì Quảng</div>
+                    <div class="desc">Mì Quảng sợi to, dai, nước dùng đậm đà, ăn kèm tôm, thịt và rau sống.</div>
+                    <div class="price">20.000 VNĐ</div>
+                    <div class="buy">
+                        <button onclick="window.location.href='Thanhtoan20.html';">Mua hàng</button>
+                        <button class="add-to-cart" onclick="addToCart('product-4', 'Mì Quảng', 20000)">Thêm vào
+                            giỏ</button>
+                    </div>
+                </div>
+                <div class="item" id="product-5">
+                    <img style="width: 256px; height: 152px;" src="image/banhuot.png" alt="">
+                    <div class="stars">
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                    </div>
+                    <div class="name">Bánh Ướt</div>
+                    <div class="desc">Bánh ướt mềm mịn, ăn kèm nước mắm, chả, nem và hành phi thơm.</div>
+                    <div class="price">15.000 VNĐ</div>
+                    <div class="buy">
+                        <button onclick="window.location.href='Thanhtoan15.html';">Mua hàng</button>
+                        <button class="add-to-cart" onclick="addToCart('product-5', 'Bánh Ướt', 15000)">Thêm vào
+                            giỏ</button>
+                    </div>
+                </div>
+                <div class="item" id="product-6">
+                    <img style="width: 256px; height: 150px;" src="image/comchanchau.png" alt="">
+                    <div class="stars">
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                    </div>
+                    <div class="name">Cơm Chiên Chân Châu</div>
+                    <div class="desc">Cơm chiên chân châu giòn thơm, kết hợp trân châu dai lạ miệng.</div>
+                    <div class="price">20.000 VNĐ</div>
+                    <div class="buy">
+                        <button onclick="window.location.href='Thanhtoan20.html';">Mua hàng</button>
+                        <button class="add-to-cart" onclick="addToCart('product-6', 'Cơm Chiên Chân Châu', 20000)">Thêm
+                            vào giỏ</button>
+                    </div>
+                </div>
+                <div class="item" id="product-7">
+                    <img style="width: 256px; height: 152px;" src="food/xoi.png" alt="">
+                    <div class="stars">
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                    </div>
+                    <div class="name">Xôi Mặn</div>
+                    <div class="desc">Xôi mặn dẻo thơm, ăn kèm chả, trứng, lạp xưởng và nước sốt đậm đà.</div>
+                    <div class="price">15.000 VNĐ</div>
+                    <div class="buy">
+                        <button onclick="window.location.href='Thanhtoan15.html';">Mua hàng</button>
+                        <button class="add-to-cart" onclick="addToCart('product-7', 'Xôi Mặn', 15000)">Thêm vào
+                            giỏ</button>
+                    </div>
+                </div>
+                <div class="item" id="product-8">
+                    <img style="width: 256px; height: 152px;" src="food/xoibap.png" alt="">
+                    <div class="stars">
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                    </div>
+                    <div class="name">Xôi Bắp</div>
+                    <div class="desc">Xôi bắp dẻo bùi, thơm mùi bắp, ăn kèm hành phi và đậu phộng.</div>
+                    <div class="price">15.000 VNĐ</div>
+                    <div class="buy">
+                        <button onclick="window.location.href='Thanhtoan15.html';">Mua hàng</button>
+                        <button class="add-to-cart" onclick="addToCart('product-8', 'Xôi Bắp', 15000)">Thêm vào
+                            giỏ</button>
+                    </div>
+                </div>
+            </ul>
+
+            <!-- Tab 2 -->
+            <ul id="tab-2" class="tab-content">
+                <div class="item" id="product-9">
+                    <img style="width: 256px; height: 155px;" src="food/bunrieu.png" alt="">
+                    <div class="stars">
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                    </div>
+                    <div class="name">Bún riêu cua</div>
+                    <div class="desc">Bún riêu cua thanh ngọt, đậm đà, kết hợp riêu cua, cà chua và rau sống.</div>
+                    <div class="price">20.000 VNĐ</div>
+                    <div class="buy">
+                        <button onclick="window.location.href='Thanhtoan20.html';">Mua hàng</button>
+                        <button class="add-to-cart" onclick="addToCart('product-9', 'Bún riêu cua', 20000)">Thêm vào
+                            giỏ</button>
+                    </div>
+                </div>
+                <div class="item" id="product-10">
+                    <img style="width: 256px; height: 152px;" src="food/hutieu.png" alt="">
+                    <div class="stars">
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                    </div>
+                    <div class="name">Hủ tiếu</div>
+                    <div class="desc">Hủ tiếu dai mềm, nước dùng thanh ngọt, ăn kèm thịt và rau sống.</div>
+                    <div class="price">20.000 VNĐ</div>
+                    <div class="buy">
+                        <button onclick="window.location.href='Thanhtoan20.html';">Mua hàng</button>
+                        <button class="add-to-cart" onclick="addToCart('product-10', 'Hủ tiếu', 20000)">Thêm vào
+                            giỏ</button>
+                    </div>
+                </div>
+                <div class="item" id="product-11">
+                    <img style="width: 256px; height: 152px;" src="food/bokho.png" alt="">
+                    <div class="stars">
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                    </div>
+                    <div class="name">Bò kho</div>
+                    <div class="desc">Bò kho đậm đà, thịt bò mềm, thơm mùi sả, ăn kèm bánh mì.</div>
+                    <div class="price">20.000 VNĐ</div>
+                    <div class="buy">
+                        <button onclick="window.location.href='Thanhtoan20.html';">Mua hàng</button>
+                        <button class="add-to-cart" onclick="addToCart('product-11', 'Bò kho', 20000)">Thêm vào
+                            giỏ</button>
+                    </div>
+                </div>
+                <div class="item" id="product-12">
+                    <img style="width: 256px; height: 155px;" src="food/opla.png" alt="">
+                    <div class="stars">
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                    </div>
+                    <div class="name">Ốp la</div>
+                    <div class="desc">Ốp la đơn giản, trứng vàng ươm, lòng đào béo ngậy, ăn kèm bánh mì.</div>
+                    <div class="price">15.000 VNĐ</div>
+                    <div class="buy">
+                        <button onclick="window.location.href='Thanhtoan15.html';">Mua hàng</button>
+                        <button class="add-to-cart" onclick="addToCart('product-12', 'Ốp la', 15000)">Thêm vào
+                            giỏ</button>
+                    </div>
+                </div>
+                <div class="item" id="product-17">
+                    <img style="width: 256px; height: 152px;" src="food/chaothitbam.png" alt="">
+                    <div class="stars">
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                    </div>
+                    <div class="name">Cháo thịt bằm</div>
+                    <div class="desc">Cháo thịt bằm mềm mịn, thơm ngon, đậm đà, ăn kèm hành lá và tiêu.</div>
+                    <div class="price">20.000 VNĐ</div>
+                    <div class="buy">
+                        <button onclick="window.location.href='Thanhtoan20.html';">Mua hàng</button>
+                        <button class="add-to-cart" onclick="addToCart('product-17', 'Cháo thịt bằm', 20000)">Thêm
+                            vào giỏ</button>
+                    </div>
+                </div>
+                <div class="item" id="product-18">
+                    <img style="width: 256px; height: 155px;" src="food/mitron.png" alt="">
+                    <div class="stars">
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                    </div>
+                    <div class="name">Mì trộn</div>
+                    <div class="desc">Mì trộn dai ngon, thấm sốt đậm đà, ăn kèm thịt, rau và trứng.</div>
+                    <div class="price">20.000 VNĐ</div>
+                    <div class="buy">
+                        <button onclick="window.location.href='Thanhtoan20.html';">Mua hàng</button>
+                        <button class="add-to-cart" onclick="addToCart('product-18', 'Mì trộn', 20000)">Thêm vào
+                            giỏ</button>
+                    </div>
+                </div>
+                <div class="item" id="product-19">
+                    <img style="width: 256px; height: 152px;" src="food/muoiot.png" alt="">
+                    <div class="stars">
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                    </div>
+                    <div class="name">Bánh mì muối ớt</div>
+                    <div class="desc">Bánh mì muối ớt giòn cay, thấm sốt đậm đà, ăn kèm ruốc, hành phi và phô mai.</div>
+                    <div class="price">20.000 VNĐ</div>
+                    <div class="buy">
+                        <button onclick="window.location.href='Thanhtoan20.html';">Mua hàng</button>
+                        <button class="add-to-cart" onclick="addToCart('product-19', 'Bánh mì muối ớt', 20000)">Thêm
+                            vào giỏ</button>
+                    </div>
+                </div>
+                <div class="item" id="product-20">
+                    <img style="width: 256px; height: 155px;" src="food/chaolong.png" alt="">
+                    <div class="stars">
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                    </div>
+                    <div class="name">Cháo lòng</div>
+                    <div class="desc">Cháo lòng nóng hổi, đậm đà, ăn kèm lòng heo, hành lá và tiêu thơm.</div>
+                    <div class="price">20.000 VNĐ</div>
+                    <div class="buy">
+                        <button onclick="window.location.href='Thanhtoan20.html';">Mua hàng</button>
+                        <button class="add-to-cart" onclick="addToCart('product-20', 'Cháo lòng', 20000)">Thêm vào
+                            giỏ</button>
+                    </div>
+                </div>
+
+            </ul>
+
+            <!-- Tab 3 -->
+            <ul id="tab-3" class="tab-content">
+                <div class="item" id="product-13">
+                    <img style="width: 256px; height: 135px;" src="food/hutieuxuong.png" alt="">
+                    <div class="stars">
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                    </div>
+                    <div class="name">Hủ tiếu xương</div>
+                    <div class="desc">Hủ tiếu xương nước dùng thanh ngọt, sợi dai mềm, ăn kèm xương hầm thơm ngon.</div>
+                    <div class="price">25.000 VNĐ</div>
+                    <div class="buy">
+                        <button onclick="window.location.href='Thanhtoan25.html';">Mua hàng</button>
+                        <button class="add-to-cart" onclick="addToCart('product-13', 'Hủ tiếu xương', 25000)">Thêm vào
+                            giỏ</button>
+                    </div>
+                </div>
+                <div class="item" id="product-14">
+                    <img style="width: 256px; height: 134px;" src="food/bunthitnuong.png" alt="">
+                    <div class="stars">
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                    </div>
+                    <div class="name">Bún thịt nướng</div>
+                    <div class="desc">Bún thịt nướng thơm lừng, thịt nướng mềm, ăn kèm rau sống và nước mắm chua ngọt.
+                    </div>
+                    <div class="price">20.000 VNĐ</div>
+                    <div class="buy">
+                        <button onclick="window.location.href='Thanhtoan20.html';">Mua hàng</button>
+                        <button class="add-to-cart" onclick="addToCart('product-14', 'Bún thịt nướng', 20000)">Thêm
+                            vào giỏ</button>
+                    </div>
+                </div>
+                <div class="item" id="product-15">
+                    <img style="width: 256px; height: 134px;" src="food/banhcanhxuong.png" alt="">
+                    <div class="stars">
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                    </div>
+                    <div class="name">Bánh canh xương</div>
+                    <div class="desc">Bánh canh xương nước dùng đậm đà, sợi bánh dai mềm, xương hầm ngon ngọt.</div>
+                    <div class="price">25.000 VNĐ</div>
+                    <div class="buy">
+                        <button onclick="window.location.href='Thanhtoan25.html';">Mua hàng</button>
+                        <button class="add-to-cart" onclick="addToCart('product-15', 'Bánh canh xương', 25000)">Thêm
+                            vào giỏ</button>
+                    </div>
+                </div>
+                <div class="item" id="product-16">
+                    <img style="width: 256px; height: 134px;" src="food/banhcanhcha.png" alt="">
+                    <div class="stars">
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                        <span><img src="image/star.png" alt=""></span>
+                    </div>
+                    <div class="name">Bánh canh chả cá</div>
+                    <div class="desc">Bánh canh chả cá nước dùng đậm đà, sợi bánh canh dai mềm, chả cá thơm ngon.</div>
+                    <div class="price">20.000 VNĐ</div>
+                    <div class="buy">
+                        <button onclick="window.location.href='Thanhtoan20.html';">Mua hàng</button>
+                        <button class="add-to-cart" onclick="addToCart('product-16', 'Bánh canh chả cá', 20000)">Thêm
+                            vào giỏ</button>
+                    </div>
+                </div>
+
+            </ul>
+
+
+
+            <div class="list-page">
+                <div class="item active" id="btn-1">
+                    <a href="#" onclick="showTab(event, 1)">1</a>
+                </div>
+                <div class="item" id="btn-2">
+                    <a href="#" onclick="showTab(event, 2)">2</a>
+                </div>
+                <div class="item" id="btn-3">
+                    <a href="#" onclick="showTab(event, 3)">3</a>
+                </div>
+            </div>
+        </div>
+
+        <section id="cart">
+            <h2>GIỎ HÀNG CỦA BẠN</h2>
+            <div id="cart-body">
+                <ul id="list-cart"></ul>
+                <div id="cart-total">
+                    <span>Tổng cộng: </span><span id="total-price">0 VNĐ</span>
+                </div>
+                <button id="checkout-btn">Thanh toán</button>
+            </div>
+        </section>
+
+        <div id="comment">
+            <h2>NHẬN XÉT CỦA KHÁCH HÀNG</h2>
+            <div id="comment-body">
+                <div class="prev">
+                    <a href="#">
+                        <img src="image/prev.png" style="height: 40px;" alt="">
+                    </a>
+                </div>
+                <ul id="list-comment">
+                    <li class="item">
+                        <div class="avatar">
+                            <img src="image/avatar_1.png" alt="">
+                        </div>
+                        <div class="stars">
+                            <span><img src="image/star.png" alt=""></span>
+                            <span><img src="image/star.png" alt=""></span>
+                            <span><img src="image/star.png" alt=""></span>
+                            <span><img src="image/star.png" alt=""></span>
+                            <span><img src="image/star.png" alt=""></span>
+                        </div>
+                        <div class="name">Nguyễn Đình Vũ</div>
+                        <div class="text">
+                            <p>Trang web rất dễ sử dụng, giao diện thân thiện, đồ ăn đa dạng và chất lượng tuyệt vời!
+                            </p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="avatar">
+                            <img src="image/avatar_1.png" alt="">
+                        </div>
+                        <div class="stars">
+                            <span><img src="image/star.png" alt=""></span>
+                            <span><img src="image/star.png" alt=""></span>
+                            <span><img src="image/star.png" alt=""></span>
+                            <span><img src="image/star.png" alt=""></span>
+                            <span><img src="image/star.png" alt=""></span>
+                        </div>
+                        <div class="name">Trần Ngọc Sơn</div>
+                        <div class="text">
+                            <p>Món ăn đặt trên web này lúc nào cũng ngon, giao hàng nhanh, trình bày đẹp mắt. Rất đáng
+                                để
+                                thử!</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="avatar">
+                            <img src="image/avatar_1.png" alt="">
+                        </div>
+                        <div class="stars">
+                            <span><img src="image/star.png" alt=""></span>
+                            <span><img src="image/star.png" alt=""></span>
+                            <span><img src="image/star.png" alt=""></span>
+                            <span><img src="image/star.png" alt=""></span>
+                            <span><img src="image/star.png" alt=""></span>
+                        </div>
+                        <div class="name">Nguyễn Trần Vi</div>
+                        <div class="text">
+                            <p>Trải nghiệm mua đồ ăn online trên trang này rất tuyệt! Thanh toán tiện lợi, giao hàng
+                                đúng
+                                giờ.</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="next">
+                    <a href="#">
+                        <img src="image/next.png" style="height: 40px;" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="footer">
+            <div class="box">
+                <div class="logo">
+                    <img src="image/logoce.png" alt="">
+                </div>
+                <p>
+                <h3>Cung cấp sản phẩm với chất lượng an toàn cho quý khách</h3>
+                </p>
+            </div>
+            <div class="box">
+                <h3>NỘI DUNG</h3>
+                <ul class="quick-menu">
+                    <div class="item">
+                        <a href="">Trang chủ</a>
+                    </div>
+                    <div class="item">
+                        <a href="#wp-products">Sản phẩm</a>
+                    </div>
+                    <div class="item">
+                        <a href="#cart">Giỏ hàng</a>
+                    </div>
+                    <div class="item">
+                        <a href="">Liên hệ</a>
+                    </div>
+                </ul>
+            </div>
+            <div class="box">
+                <h3>LIÊN HỆ</h3>
+                <p>
+                    <b>Điện thoại:</b>0792408280<br>
+                                      0989104336
+                </p>
+                <p>
+                    <b>Email:</b>minhpq.24ce@vku.udn.vn<br>
+                               quanvd.24ceb@vku.und.vn
+                </p>
+                <p>
+                    <b>Địa chỉ:</b>Hòa Hải, Ngũ Hành Sơn, Đà Nẵng
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showTab(event, tabNumber) {
+            event.preventDefault();
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.getElementById(`tab-${tabNumber}`).classList.add('active');
+            document.querySelectorAll('.list-page .item').forEach(button => {
+                button.classList.remove('active');
+            });
+            document.getElementById(`btn-${tabNumber}`).classList.add('active');
+        }
+    </script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
